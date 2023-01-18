@@ -3,12 +3,14 @@ import 'millify';
 import { Link } from 'react-router-dom';
 import { Typography, Row, Col, Statistic } from 'antd';
 
-//import { useGetCryptosQuery } from '../services/cryptoApi';
+import { useGetCryptosQuery } from '../services/cryptoApi';
 
 const { Title } = Typography;
 
 const HomePage = () => {
-
+  const { data, isFetching} = useGetCryptosQuery();
+  
+  console.log(data);
 
 
   return (
