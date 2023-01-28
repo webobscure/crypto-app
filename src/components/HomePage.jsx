@@ -8,9 +8,9 @@ import { useGetCryptosQuery } from '../services/cryptoApi';
 const { Title } = Typography;
 
 const HomePage = () => {
-  const { data, isFetching} = useGetCryptosQuery();
+  //const { data, isFetching} = useGetCryptosQuery();
   
-  console.log(data);
+  //console.log(data);
 
 
   return (

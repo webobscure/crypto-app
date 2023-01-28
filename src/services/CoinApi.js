@@ -11,7 +11,7 @@ export const coinApi = axios.getUri(options, function (response) {
     const chunks = [];
     response.on("data", function (chunk) {
       chunks.push(chunk);
-    });
+     });
   });
    
   coinApi.end();
