@@ -1,11 +1,7 @@
-import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
+import create  from "zustand";
 
-import { coinApi } from '../services/CoinApi';
-
-export default configureStore({
-  reducer: {
-    [coinApi.reducerPath]: coinApi.reducer,
-  },
-
-  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(coinApi.middleware)
-});
+const coinStore = create((set)=> {
+    fetchCoins: () => {
+        axios.get('https://api.coingecko.com/api/v3/coins/list')
+    }
+})
